@@ -5,82 +5,86 @@
 }
 
 <div class="container">
-	<form class="form-horizontal" role="form">
-		<h2>Registrar Novo Endereço</h2>
 
-		<div class="form-group">
-			<label for="cep" class="col-sm-3 control-label">CEP</label>
-			<div class="col-sm-3">
-				<input type="text" id="cep" placeholder="CEP" class="form-control" required>
-			</div>
-		</div>
 
-		<div class="form-group">
-			<label for="nome" class="col-sm-3 control-label">Nome Completo</label>
-			<div class="col-sm-9">
-				<input type="text" id="nome" placeholder="Nome Completo" class="form-control" required>
-			</div>
-		</div>
+    <form>
+        <h2>Registrar Novo Endereço</h2>
 
-		<div class="form-group">
-			<label for="endereco" class="col-sm-3 control-label">Endereço*</label>
-			<div class="col-sm-9">
-				<input type="text" id="endereco" placeholder="Endereço" class="form-control" required>
-			</div>
-		</div>
+        <div class="row mb-3">
+            <label for="cep" class="col-sm-3 col-form-label">CEP</label>
+            <div class="col-sm-3">
+                <input type="text" id="cep" placeholder="CEP" class="form-control" required>
+            </div>
+        </div>
 
-		<!-- Número e Complemento lado a lado -->
-		<div class="form-group">
-			<label for="numero" class="col-sm-3 control-label">Número*</label>
-			<div class="col-sm-3">
-				<input type="text" id="numero" placeholder="Número" class="form-control" required>
-			</div>
+        <div class="row mb-3">
+            <label for="nome" class="col-sm-3 col-form-label">Nome Completo</label>
+            <div class="col-sm-9">
+                <input type="text" id="nome" placeholder="Nome Completo" class="form-control" required>
+            </div>
+        </div>
 
-			<label for="complemento" class="col-sm-3 control-label">Complemento</label>
-			<div class="col-sm-3">
-				<input type="text" id="complemento" placeholder="Complemento" class="form-control">
-			</div>
-		</div>
+        <div class="row mb-3">
+            <label for="endereco" class="col-sm-3 col-form-label">Endereço*</label>
+            <div class="col-sm-9">
+                <input type="text" id="endereco" placeholder="Endereço" class="form-control" required>
+            </div>
+        </div>
 
-		<div class="form-group">
-			<label for="bairro" class="col-sm-3 control-label">Bairro*</label>
-			<div class="col-sm-9">
-				<input type="text" id="bairro" placeholder="Bairro" class="form-control" required>
-			</div>
-		</div>
+        <!-- Número e Complemento lado a lado -->
+        <div class="row mb-3">
+            <label for="numero" class="col-sm-3 col-form-label">Número*</label>
+            <div class="col-sm-3">
+                <input type="text" id="numero" placeholder="Número" class="form-control" required>
+            </div>
 
-		<div class="form-group">
-			<label for="cidade" class="col-sm-3 control-label">Cidade*</label>
-			<div class="col-sm-9">
-				<input type="text" id="cidade" placeholder="Cidade" class="form-control" required>
-			</div>
-		</div>
+            <label for="complemento" class="col-sm-3 col-form-label">Complemento</label>
+            <div class="col-sm-3">
+                <input type="text" id="complemento" placeholder="Complemento" class="form-control">
+            </div>
+        </div>
 
-		<!-- Estado e Telefone lado a lado -->
-		<div class="form-group">
-			<label for="estado" class="col-sm-3 control-label">Estado*</label>
-			<div class="col-sm-3">
-				<input type="text" id="estado" placeholder="Estado" class="form-control" required>
-			</div>
+        <div class="row mb-3">
+            <label for="bairro" class="col-sm-3 col-form-label">Bairro*</label>
+            <div class="col-sm-9">
+                <input type="text" id="bairro" placeholder="Bairro" class="form-control" required>
+            </div>
+        </div>
 
-			<label for="telefone" class="col-sm-3 control-label">Telefone*</label>
-			<div class="col-sm-6">
-				<input type="text" id="telefone" placeholder="Telefone" class="form-control" required>
-			</div>
-		</div>
+        <div class="row mb-3">
+            <label for="cidade" class="col-sm-3 col-form-label">Cidade*</label>
+            <div class="col-sm-9">
+                <input type="text" id="cidade" placeholder="Cidade" class="form-control" required>
+            </div>
+        </div>
 
-		<div class="form-group">
-			<div class="col-sm-9 col-sm-offset-3">
-				<span class="help-block">*Campos Obrigatórios</span>
-			</div>
-		</div>
+        <!-- Estado e Telefone lado a lado -->
+        <div class="row mb-3">
+            <label for="estado" class="col-sm-3 col-form-label">Estado*</label>
+            <div class="col-sm-3">
+                <input type="text" id="estado" placeholder="Estado" class="form-control" required>
+            </div>
 
-		<br />
+            <label for="telefone" class="col-sm-3 col-form-label">Telefone*</label>
+            <div class="col-sm-3">
+                <input type="text" id="telefone" placeholder="Telefone" class="form-control" required>
+            </div>
+        </div>
 
-		<div class="d-grid gap-2">
-			<button type="submit" class="btn btn-primary">Salvar</button>
-			<button type="button" class="btn btn-secondary">Voltar</button>
-		</div>
-	</form>
+        <div class="row mb-3">
+            <div class="col-sm-9 offset-sm-3">
+                <span class="form-text">*Campos Obrigatórios</span>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-secondary">Voltar</button>
+        </div>
+    </form>
+
+
+
+
 
 </div>
