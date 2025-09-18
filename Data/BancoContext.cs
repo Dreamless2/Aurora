@@ -1,6 +1,8 @@
-﻿namespace Aurora.Data
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Aurora.Data
 {
-    public class BancoContext
+    public class BancoContext: DbContext
     {
     }
 }
