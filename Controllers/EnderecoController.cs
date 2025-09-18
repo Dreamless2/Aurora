@@ -1,4 +1,5 @@
-﻿using Aurora.Repositorio;
+﻿using Aurora.Models;
+using Aurora.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aurora.Controllers
@@ -33,7 +34,7 @@ namespace Aurora.Controllers
         }
 
         [HttpPost]
-        public IActionResult Criar(Models.EnderecoModel enderecoModel)
+        public IActionResult Criar(EnderecoModel enderecoModel)
         {
             _enderecoRepositorio.Adicionar(enderecoModel);
             return RedirectToAction("Index");
