@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Identity.Client;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aurora.Data
 {
@@ -8,5 +9,7 @@ namespace Aurora.Data
         {
 
         }
+
+        public DbSet<Models.EnderecoModel> Enderecos { get; set; }
     }
 }
