@@ -25,5 +25,26 @@
 				<th scope="col">CEP</th>
 			</tr>
 		</thead>
+		<tbody>
+			@if (Model != null && Model.Any())
+			{
+			@foreach (var endereco in Model)
+			{
+				<tr>
+					<th scope="row">@endereco.Id</th>
+					<td>@endereco.Endereco</td>
+					<td>@endereco.Numero</td>
+					<td>@endereco.Complemento</td>
+					<td>@endereco.Bairro</td>
+					<td>@endereco.Cidade</td>
+					<td>@endereco.Estado</td>
+					<td>@endereco.Cep</td>
+					<td>
+						<a class="btn btn-sm btn-primary" role="button" asp-controller="Endereco" asp-action="Editar" asp-route-id="@endereco.Id">Editar</a>
+						<a class="btn btn-sm btn-danger" role="button" asp-controller="Endereco" asp-action="Excluir" asp-route-id="@endereco.Id">Excluir</a>
+					</td>
+				</tr>
+			}
+			}
 	</table>
 </div>
