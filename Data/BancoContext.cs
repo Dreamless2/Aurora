@@ -3,13 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Aurora.Data
 {
-    public class BancoContext: DbContext
+    public class BancoContext(DbContextOptions<BancoContext> options) : DbContext(options)
     {
-        public BancoContext(DbContextOptions<BancoContext> options) : base(options)
-        {
-
-        }
-
         public DbSet<Models.EnderecoModel> Enderecos { get; set; }
     }
 }
