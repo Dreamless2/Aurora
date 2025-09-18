@@ -1,6 +1,9 @@
-﻿namespace Aurora.Repositorio
+﻿using Aurora.Models;
+
+namespace Aurora.Repositorio
 {
     public interface IEnderecoRepositorio
     {
+        EnderecoModel Adicionar(EnderecoModel endereco);
     }
 }

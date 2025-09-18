@@ -14,7 +14,7 @@ namespace Aurora
 
             builder.Services.AddEntityFrameworkSqlServer()
                 .AddDbContext<Data.BancoContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
