@@ -19,7 +19,7 @@ namespace Aurora.Controllers
 
         public IActionResult Criar()
         {
-            var endereco = _enderecoRepositorio.Listar();
+            var endereco = _enderecoRepositorio.BuscarTodos();
             return View(endereco);
         }
 
