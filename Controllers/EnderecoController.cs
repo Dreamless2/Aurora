@@ -18,7 +18,8 @@ namespace Aurora.Controllers
 
         public IActionResult Criar()
         {
-            return View();
+            var endereco = _enderecoRepositorio.Listar();
+            return View(endereco);
         }
 
         public IActionResult Editar()
