@@ -18,7 +18,7 @@ namespace Aurora.Repositorio
             return endereco;
         }
 
-        public List<EnderecoModel> Listar()
+        public List<EnderecoModel> BuscarTodos()
         {
             var resultado = _bancoContext.Enderecos.ToList();
             return resultado;
