@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Aurora
 {
     public class Program
@@ -8,6 +11,10 @@ namespace Aurora
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddEntityFrameworkSqlServer()
+                .AddDbContext<Data.BancoContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
 
             var app = builder.Build();
 
