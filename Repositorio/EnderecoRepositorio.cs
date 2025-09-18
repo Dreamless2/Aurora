@@ -17,5 +17,11 @@ namespace Aurora.Repositorio
             _bancoContext.SaveChanges();
             return endereco;
         }
+
+        public List<EnderecoModel> Listar()
+        {
+            var resultado = _bancoContext.Enderecos.ToList();
+            return resultado;
+        }
     }
 }
