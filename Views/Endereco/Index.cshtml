@@ -16,6 +16,7 @@
 		<thead>
 			<tr>
 				<th scope="col">#</th>
+				<th scope="col">Nome</th>
 				<th scope="col">Endereço</th>
 				<th scope="col">Número</th>
 				<th scope="col">Complemento</th>
@@ -23,6 +24,7 @@
 				<th scope="col">Cidade</th>
 				<th scope="col">Estado</th>
 				<th scope="col">CEP</th>
+				<th scope="col">Telefone</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -40,6 +42,7 @@
 						<td>@endereco.Cidade</td>
 						<td>@endereco.Estado</td>
 						<td>@endereco.Cep</td>
+						<td>@endereco.Telefone</td>
 						<td>
 							<a class="btn btn-sm btn-primary" role="button" asp-controller="Endereco" asp-action="Editar" asp-route-id="@endereco.Id">Editar</a>
 							<a class="btn btn-sm btn-danger" role="button" asp-controller="Endereco" asp-action="Excluir" asp-route-id="@endereco.Id">Excluir</a>
