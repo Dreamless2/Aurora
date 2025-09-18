@@ -2,6 +2,23 @@
 	ViewData["Title"] = "Editar Endereço";
 }
 
+@section Scripts {
+	<script src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+}
+
+@section BodyScripts {
+	<script>
+		$(document).ready(function(){
+			$("#telefone").mask("(00) 00000-0000", {
+				placeholder: "(00) 00000-0000"
+			});
+			$("#cep").mask("000000-000", {
+				placeholder: "000000-000"
+			});
+		});
+	</script>
+}
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 mb-4">
@@ -15,7 +32,7 @@
 						<div class="form-outline mb-4">
 							<div class="col-sm-3">
 								<label class="form-label" for="cep">CEP</label>
-								<input type="text" id="cep" class="form-control" />
+								<input type="text" id="cep" data-mask="00000-000" class="form-control" />
 							</div>
 						</div>
 
@@ -28,8 +45,8 @@
 
 						<div class="form-outline mb-4">
 							<div class="form-outline">
-								<label class="form-label" for="enderecoe">Endereço</label>
-								<input type="text" id="endereco" class="form-control" />
+								<label class="form-label" for="endereco">Endereço</label>
+								<input type="text" id="enderecoe" class="form-control" />
 							</div>
 						</div>
 
@@ -61,21 +78,21 @@
 						<div class="row mb-4">
 							<div class="col-sm-9">
 								<div class="form-outline">
-									<label class="form-label" for="form7Example1">Estado</label>
-									<input type="text" id="telefone" class="form-control" />
+									<label class="form-label" for="estado">Estado</label>
+									<input type="text" id="estado" class="form-control" />
 								</div>
 							</div>
 							<div class="col">
 								<div class="form-outline">
 									<label class="form-label" for="telefone">Telefone</label>
-									<input type="text" id="telefone" class="form-control" />
+									<input type="text" id="telefone" data-mask="(00) 00000-0000" class="form-control" />
 
 								</div>
 							</div>
 						</div>
 
 						<div class="d-grid gap-2">
-							<button class="btn btn-primary" type="button">Registrar</button>
+							<button class="btn btn-primary" type="submit">Registrar</button>
 							<button class="btn btn-secondary" type="button" asp-controller="Endereco" asp-action="Index">Voltar</button>
 						</div>
 
