@@ -25,7 +25,7 @@ namespace Aurora.Repositorio
 
             if (endereco == null)
             {
-                throw new Exception("Endereço nao encontrado.");
+                throw new Exception("Erro na exclusão.");
             }
             _bancoContext.Enderecos.Remove(endereco);
             _bancoContext.SaveChanges();
@@ -39,7 +39,7 @@ namespace Aurora.Repositorio
 
             if (enderecoDB == null)
             {
-                throw new Exception("Endereço nao encontrado.");
+                throw new Exception("Endereço não encontrado.");
             }
 
             enderecoDB.Nome = endereco.Nome;
