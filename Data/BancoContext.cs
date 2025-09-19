@@ -9,4 +9,22 @@ namespace Aurora.Data
     {
         public DbSet<EnderecoModel> Enderecos { get; set; }
     }
-}
+
+    public DateTime? UpdatedAt { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configurar a tabela "enderecos"
+            modelBuilder.Entity<EnderecoModel>(entity =>
+            {
+                entity.ToTable("enderecos", b => b.UseSqlOutputClause(false)); // 🔹 Desabilita OUTPUT para evitar erro com trigger
+
+                // Configura o campo updated_at como gerado pelo banco
+                entity.Property(e => e.UpdatedAt)
+                      .HasColumnName("updated_at")
+                      .ValueGeneratedOnAddOrUpdate()
+                      .Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+            });
+        }
+    }
