@@ -26,7 +26,7 @@ namespace Aurora.Repositorio
 
             if (enderecoDB == null)
             {
-                throw new Exception("Endereço nao encontrado");
+                throw new Exception("Endereço nao encontrado.");
             }
 
             enderecoDB.Nome = endereco.Nome;
