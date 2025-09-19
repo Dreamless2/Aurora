@@ -18,6 +18,11 @@ namespace Aurora.Repositorio
             return endereco;
         }
 
+        public EnderecoModel Atualizar(EnderecoModel endereco)
+        {
+            throw new NotImplementedException();
+        }
+
         public EnderecoModel BuscarPorId(int id)
         {
             var resultado = _bancoContext.Enderecos.FirstOrDefault(x => x.Id == id);
