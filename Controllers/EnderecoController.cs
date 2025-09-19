@@ -44,9 +44,6 @@ namespace Aurora.Controllers
                 return RedirectToAction("Index");
             }
 
-
-
-
             return View(enderecoModel);
         }
 
@@ -54,8 +51,11 @@ namespace Aurora.Controllers
         public IActionResult Alterar(EnderecoModel enderecoModel)
         {
 
-            _enderecoRepositorio.Atualizar(enderecoModel);
-            return RedirectToAction("Index");
+            if (!ModelState.IsValid)
+            {
+                _enderecoRepositorio.Atualizar(enderecoModel);
+                return RedirectToAction("Index");
+            }
         }
 
 
