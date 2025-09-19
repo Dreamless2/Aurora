@@ -13,12 +13,10 @@ namespace Aurora.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configurar a tabela "enderecos"
             modelBuilder.Entity<EnderecoModel>(entity =>
             {
-                entity.ToTable("enderecos", b => b.UseSqlOutputClause(false)); // 🔹 Desabilita OUTPUT para evitar erro com trigger
+                entity.ToTable("enderecos", b => b.UseSqlOutputClause(false));
 
-                // Configura o campo updated_at como gerado pelo banco
                 entity.Property(e => e.UpdatedAt)
                       .HasColumnName("updated_at")
                       .ValueGeneratedOnAddOrUpdate()
