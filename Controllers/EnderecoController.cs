@@ -38,11 +38,15 @@ namespace Aurora.Controllers
         [HttpPost]
         public IActionResult Criar(EnderecoModel enderecoModel)
         {
-            if (ModelState.IsValid == false)
+            if (ModelState.IsValid)
             {
                 _enderecoRepositorio.Adicionar(enderecoModel);
                 return RedirectToAction("Index");
             }
+
+
+
+
             return View(enderecoModel);
         }
 

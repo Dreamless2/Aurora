@@ -80,23 +80,27 @@
 							<div class="col-sm-3">
 								<label class="form-label" for="cep">CEP</label>
 								<input type="text" id="cep" data-mask="00000-000" asp-for="Cep" class="form-control" />
+								@Html.ValidationMessageFor(model => model.Cep, "", new { @class = "text-danger" })
 							</div>
 						</div>
 
 						<div class="form-outline mb-4">
 							<label class="form-label" for="nome">Nome Completo</label>
 							<input type="text" id="nome" asp-for="Nome" class="form-control" />
+							@Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
 						</div>
 
 						<div class="form-outline mb-4">
 							<label class="form-label" for="endereco">Endereço</label>
 							<input type="text" id="endereco" asp-for="Endereco" class="form-control" />
+							@Html.ValidationMessageFor(model => model.Endereco, "", new { @class = "text-danger" })
 						</div>
 
 						<div class="row mb-4">
 							<div class="col-sm-3">
 								<label class="form-label" for="numero">Número</label>
 								<input type="text" id="numero" asp-for="Numero" class="form-control" />
+								@Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
 							</div>
 							<div class="col-sm-9">
 								<label class="form-label" for="complemento">Complemento</label>
@@ -107,16 +111,19 @@
 						<div class="form-outline mb-4">
 							<label class="form-label" for="bairro">Bairro</label>
 							<input type="text" id="bairro" asp-for="Bairro" class="form-control" />
+							@Html.ValidationMessageFor(model => model.Bairro, "", new { @class = "text-danger" })
 						</div>
 
 						<div class="row mb-4">
 							<div class="col-sm-9">
 								<label class="form-label" for="cidade">Cidade</label>
 								<input type="text" id="cidade" asp-for="Cidade" class="form-control" />
+								@Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
 							</div>
 							<div class="col-sm-3">
 								<label class="form-label" for="estado">Estado</label>
 								<input type="text" id="estado" asp-for="Estado" class="form-control" />
+								@Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
 							</div>
 						</div>
 
@@ -124,6 +131,7 @@
 							<div class="col-sm-3">
 								<label class="form-label" for="telefone">Telefone</label>
 								<input type="text" id="telefone" data-mask="(00) 00000-0000" asp-for="Telefone" class="form-control" />
+								@Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
 							</div>
 						</div>
 
