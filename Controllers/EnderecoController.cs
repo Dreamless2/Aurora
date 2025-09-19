@@ -53,7 +53,7 @@ namespace Aurora.Controllers
 
         public IActionResult Apagar(int id)
         {
-            var endereco = _enderecoRepositorio.BuscarPorId(id);
+            var endereco = _enderecoRepositorio.Apagar(id);
             return RedirectToAction("Index");
         }
     }
