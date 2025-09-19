@@ -43,9 +43,7 @@ namespace Aurora.Controllers
                 _enderecoRepositorio.Adicionar(enderecoModel);
                 return RedirectToAction("Index");
             }
-
             return View(enderecoModel);
-
         }
 
         [HttpPost]
