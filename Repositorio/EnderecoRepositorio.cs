@@ -23,19 +23,19 @@ namespace Aurora.Repositorio
         public EnderecoModel Atualizar(EnderecoModel endereco)
         {
 
+            var enderecoDB = BuscarPorId(endereco.Id);
+
             if (enderecoDB == null)
             {
                 throw new Exception("Endereço nao encontrado");
             }
-
-            var enderecoDB = BuscarPorId(endereco.Id);
 
             enderecoDB.Nome = endereco.Nome;
             enderecoDB.Endereco = endereco.Endereco;
             enderecoDB.Numero = endereco.Numero;
             enderecoDB.Complemento = endereco.Complemento;
             enderecoDB.Bairro = endereco.Bairro;
-enderecoDB.Cidade = endereco.Cidade;
+            enderecoDB.Cidade = endereco.Cidade;
             enderecoDB.Estado = endereco.Estado;
             enderecoDB.Cep = endereco.Cep;
             enderecoDB.Telefone = endereco.Telefone;
