@@ -8,6 +8,6 @@ namespace Aurora.Repositorio
         List<EnderecoModel> BuscarTodos();
         EnderecoModel BuscarPorId(int id);
         EnderecoModel Atualizar(EnderecoModel endereco);
-        //bool Apagar(int id);
+        bool Apagar(int id);
     }
 }
