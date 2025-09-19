@@ -41,5 +41,11 @@ namespace Aurora.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Alterar(EnderecoModel enderecoModel)
+        {
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
