@@ -76,6 +76,8 @@
 				<div class="card-body">
 					<form asp-controller="Endereco" asp-action="Editar" method="post">
 
+						<input type="hidden" asp-for="Id" />
+
 						<div class="form-outline mb-4">
 							<div class="col-sm-3">
 								<label class="form-label" for="cep">CEP</label>
