@@ -22,7 +22,7 @@ namespace Aurora.Repositorio
         public EnderecoModel Atualizar(EnderecoModel endereco)
         {
 
-            EnderecoModel enderecoDB = BuscarPorId(endereco.Id);
+            var enderecoDB = BuscarPorId(endereco.Id);
 
             if (enderecoDB == null)
             {
