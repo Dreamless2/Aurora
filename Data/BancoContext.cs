@@ -7,9 +7,6 @@ namespace Aurora.Data
 {
     public class BancoContext(DbContextOptions<BancoContext> options) : DbContext(options)
     {
-
-
-
         public DbSet<EnderecoModel> Enderecos { get; set; }
     }
-    }
+}
