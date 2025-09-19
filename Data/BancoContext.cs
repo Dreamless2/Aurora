@@ -5,13 +5,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Aurora.Data
 {
-    public class BancoContext : DbContext
+    public class BancoContext(DbContextOptions<BancoContext> options) : DbContext(options)
     {
-        public BancoContext(DbContextOptions<BancoContext> options)
-            : base(options)
-        {
-        }
-
         public DbSet<EnderecoModel> Enderecos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
