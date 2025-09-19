@@ -6,7 +6,6 @@ namespace Aurora.Repositorio
     public class EnderecoRepositorio : IEnderecoRepositorio
     {
         private readonly BancoContext _bancoContext;
-        private readonly object enderecoDB;
 
         public EnderecoRepositorio(BancoContext bancoContext)
         {
