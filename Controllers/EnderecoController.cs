@@ -29,8 +29,9 @@ namespace Aurora.Controllers
             return View(endereco);
         }
 
-        public IActionResult Excluir()
+        public IActionResult ApagarConfirmacao(int id)
         {
+            var endereco = _enderecoRepositorio.BuscarPorId(id);
             return View();
         }
 
