@@ -50,5 +50,11 @@ namespace Aurora.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public IActionResult Apagar(int id)
+        {
+            var endereco = _enderecoRepositorio.BuscarPorId(id);
+            return RedirectToAction("Index");
+        }
     }
 }
