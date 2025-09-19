@@ -40,11 +40,10 @@ namespace Aurora.Controllers
         {
             if (ModelState.IsValid == false)
             {
-                return View(enderecoModel);
+                _enderecoRepositorio.Adicionar(enderecoModel);
+                return RedirectToAction("Index");
             }
 
-            _enderecoRepositorio.Adicionar(enderecoModel);
-            return RedirectToAction("Index");
         }
 
         [HttpPost]
