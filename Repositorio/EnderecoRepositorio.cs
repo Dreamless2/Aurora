@@ -6,6 +6,8 @@ namespace Aurora.Repositorio
     public class EnderecoRepositorio : IEnderecoRepositorio
     {
         private readonly BancoContext _bancoContext;
+        private readonly object enderecoDB;
+
         public EnderecoRepositorio(BancoContext bancoContext)
         {
             _bancoContext = bancoContext;
@@ -20,13 +22,20 @@ namespace Aurora.Repositorio
 
         public EnderecoModel Atualizar(EnderecoModel endereco)
         {
-            var enderecoDB = BuscarPorId(endereco.Id) ?? throw new Exception("Endereço nao encontrado");
+
+            if (enderecoDB == null)
+            {
+                throw new Exception("Endereço nao encontrado");
+            }
+
+            var enderecoDB = BuscarPorId(endereco.Id);
+
             enderecoDB.Nome = endereco.Nome;
             enderecoDB.Endereco = endereco.Endereco;
             enderecoDB.Numero = endereco.Numero;
             enderecoDB.Complemento = endereco.Complemento;
             enderecoDB.Bairro = endereco.Bairro;
-            enderecoDB.Cidade = endereco.Cidade;
+enderecoDB.Cidade = endereco.Cidade;
             enderecoDB.Estado = endereco.Estado;
             enderecoDB.Cep = endereco.Cep;
             enderecoDB.Telefone = endereco.Telefone;
