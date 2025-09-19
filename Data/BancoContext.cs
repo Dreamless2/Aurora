@@ -10,4 +10,6 @@ namespace Aurora.Data
 
     }
 
-}
+     public DbSet<EnderecoModel> Enderecos { get; set; }
+
+    }
