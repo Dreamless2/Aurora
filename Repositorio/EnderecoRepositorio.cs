@@ -19,6 +19,11 @@ namespace Aurora.Repositorio
             return endereco;
         }
 
+        public bool Apagar(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public EnderecoModel Atualizar(EnderecoModel endereco)
         {
 
