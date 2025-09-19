@@ -56,6 +56,8 @@ namespace Aurora.Controllers
                 _enderecoRepositorio.Atualizar(enderecoModel);
                 return RedirectToAction("Index");
             }
+
+            return View(enderecoModel);
         }
 
 
