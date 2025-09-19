@@ -20,7 +20,8 @@ namespace Aurora.Repositorio
 
         public EnderecoModel BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            var resultado = _bancoContext.Enderecos.FirstOrDefault(x => x.Id == id);
+            return resultado!;
         }
 
         public List<EnderecoModel> BuscarTodos()
