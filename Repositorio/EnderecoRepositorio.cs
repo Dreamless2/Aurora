@@ -21,7 +21,15 @@ namespace Aurora.Repositorio
 
         public bool Apagar(int id)
         {
-            throw new NotImplementedException();
+           var endereco = BuscarPorId(id);
+
+            if (endereco == null)
+            {
+                throw new Exception("Endereço nao encontrado.");
+            }
+            _bancoContext.Enderecos.Remove(endereco);
+            _bancoContext.SaveChanges();
+            return true;
         }
 
         public EnderecoModel Atualizar(EnderecoModel endereco)
