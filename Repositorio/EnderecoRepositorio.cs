@@ -20,9 +20,21 @@ namespace Aurora.Repositorio
 
         public EnderecoModel Atualizar(EnderecoModel endereco)
         {
-            _bancoContext.Enderecos.Update(endereco);
+          var enderecoDB =  BuscarPorId(endereco.Id);
+
+            if (enderecoDB == null) throw new Exception("Endereço nao encontrado");
+            enderecoDB.Nome = endereco.Nome;
+            enderecoDB.Endereco = endereco.Endereco;
+            enderecoDB.Numero = endereco.Numero;
+            enderecoDB.Complemento = endereco.Complemento;
+            enderecoDB.Bairro = endereco.Bairro;
+enderecoDB.Cidade = endereco.Cidade;
+            enderecoDB.Estado = endereco.Estado;
+            enderecoDB.Cep = endereco.Cep;
+            enderecoDB.Telefone = endereco.Telefone;
+            _bancoContext.Enderecos.Update(enderecoDB);
             _bancoContext.SaveChanges();
-            return endereco;
+            return enderecoDB;
         }
 
         public EnderecoModel BuscarPorId(int id)
