@@ -12,5 +12,6 @@
         public string? Estado { get; set; }
         public string? Cep { get; set; }
         public string? Telefone { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }
