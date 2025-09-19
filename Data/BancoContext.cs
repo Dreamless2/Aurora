@@ -11,8 +11,8 @@ namespace Aurora.Data
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
+        {
+            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<EnderecoModel>(entity =>
             {
@@ -25,4 +25,5 @@ namespace Aurora.Data
                       .Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
             });
         }
-}
+        }
+    }
