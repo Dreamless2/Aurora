@@ -20,7 +20,9 @@ namespace Aurora.Repositorio
 
         public EnderecoModel Atualizar(EnderecoModel endereco)
         {
-            throw new NotImplementedException();
+            _bancoContext.Enderecos.Update(endereco);
+            _bancoContext.SaveChanges();
+            return endereco;
         }
 
         public EnderecoModel BuscarPorId(int id)
