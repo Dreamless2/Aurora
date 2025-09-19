@@ -32,7 +32,7 @@ namespace Aurora.Controllers
         public IActionResult ApagarConfirmacao(int id)
         {
             var endereco = _enderecoRepositorio.BuscarPorId(id);
-            return View();
+            return View(endereco);
         }
 
         [HttpPost]
