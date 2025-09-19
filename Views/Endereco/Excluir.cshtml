@@ -2,3 +2,20 @@
 	ViewData["Title"] = "Excluir Endereço";
 }
 
+<h1>Excluir Endereço</h1>
+
+<div class="alert alert-danger" role="alert">
+	<h4 class="alert-heading">Atenção!</h4>
+	<p>Você está prestes a excluir o seguinte endereço:</p>
+	<hr>
+	<p><strong>Nome:</strong> @Model.Nome</p>
+	<p><strong>Endereço:</strong> @Model.Endereco, @Model.Numero</p>
+	<p><strong>Complemento:</strong> @Model.Complemento</p>
+	<p><strong>Bairro:</strong> @Model.Bairro</p>
+	<p><strong>Cidade:</strong> @Model.Cidade</p>
+	<p><strong>Estado:</strong> @Model.Estado</p>
+	<p><strong>CEP:</strong> @Model.Cep</p>
+	<p><strong>Telefone:</strong> @Model.Telefone</p>
+	<hr>
+	<p class="mb-0">Esta ação é irreversível. Tem certeza de que deseja continuar?</p>
+</div>
