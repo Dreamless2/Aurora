@@ -38,13 +38,23 @@ namespace Aurora.Controllers
         [HttpPost]
         public IActionResult Criar(EnderecoModel enderecoModel)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _enderecoRepositorio.Adicionar(enderecoModel);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    _enderecoRepositorio.Adicionar(enderecoModel);
+                    TempData["Sucesso"] = "Endereço cadastrado com sucesso.";
+                    return RedirectToAction("Index");
+                }
+
+
+                return View(enderecoModel);
+            }
+            catch (Exception ex)
+            {
+
             }
 
-            return View(enderecoModel);
         }
 
         [HttpPost]
@@ -53,6 +63,7 @@ namespace Aurora.Controllers
             if (ModelState.IsValid)
             {
                 _enderecoRepositorio.Atualizar(enderecoModel);
+                TempData["Sucesso"] = "Endereço atualizado com sucesso.";
                 return RedirectToAction("Index");
             }
 
