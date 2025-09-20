@@ -52,9 +52,9 @@ namespace Aurora.Controllers
             }
             catch (Exception ex)
             {
-
+                TempData["Erro"] = ex.Message;
+                return View(enderecoModel);
             }
-
         }
 
         [HttpPost]
