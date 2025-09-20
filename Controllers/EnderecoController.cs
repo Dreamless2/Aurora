@@ -50,8 +50,13 @@ namespace Aurora.Controllers
         [HttpPost]
         public IActionResult Alterar(EnderecoModel enderecoModel)
         {
-            _enderecoRepositorio.Atualizar(enderecoModel);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _enderecoRepositorio.Atualizar(enderecoModel);
+                return RedirectToAction("Index");
+            }
+
+            return View(enderecoModel);
         }
 
 
