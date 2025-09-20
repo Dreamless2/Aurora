@@ -44,7 +44,7 @@ namespace Aurora.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("Editar", enderecoModel);
+            return View(enderecoModel);
         }
 
         [HttpPost]
@@ -56,7 +56,7 @@ namespace Aurora.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(enderecoModel);
+            return View("Editar", enderecoModel);
         }
 
 
